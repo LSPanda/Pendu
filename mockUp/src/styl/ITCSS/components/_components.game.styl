@@ -1,0 +1,49 @@
+///*------------------------------------*\
+//    #COMPONENTS GAME
+//\*------------------------------------*/
+
+
+
+
+// Style for my game
+.game
+    width 40%
+    display block
+    margin 2.5% auto
+.game--spacing
+    rem-fallback( margin-bottom, 32px )
+
+.game__word
+    width 100%
+.game__word--center
+    text-align center
+.game__word--align, .game__uses--letter
+    display inline-block
+    rem-fallback( font-size, 24px )
+    color wf_word
+    rem-fallback( margin, 0 8px )
+
+.game__play
+    width 50%
+    float left
+
+.game__uses
+    width 50%
+    float right
+
+.game__reset--button
+    display block
+    rem-fallback( font-size, 20px )
+    color wf_link-color
+    text-align center
+    background wf_background-button
+    rem-fallback( padding, 12px 24px )
+    rem-fallback( margin, 24px 0 )
+    transition( all, 0.25s )
+    &:hover
+        color wf_link-color
+        background wf_background-button-hover
+
+.hightlight
+    font-weight bold
+    color wf_hightlight

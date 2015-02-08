@@ -2,17 +2,45 @@
 
 extends includes/layout
 
-block title
-    title Accueil
-    
-block style
-    link(rel="stylesheet" href="css/main.css")
-
 block header
     include includes/header.jade
     
 block content
-    p Template personnel de maquette, utilisant Jade et Stylus.
-
-block footer
-    include includes/footer.jade
+    section.clearfix.game
+        h2.hidden Le jeu du pendu
+        section.game--spacing.game__word
+            h3.delta Trouvez le mot secret&nbsp;!
+            div.game__word--center
+                - var numberItem = 0
+                while numberItem < 5
+                    span.game__word--align -
+                    - numberItem++
+        
+        section.game--spacing.game__play
+            h3.delta Choisissez une lettre
+            form(action="index.php" method="post").form
+                select(name="lettreEssayee").form__select
+                    option(value="a") a
+                    option(value="b") b
+                    option(value="c") c
+                    option(value="d") d
+                    option(value="e") e
+                input(type="hidden" value="something")
+                input(type="submit" value="Essayer").form__submit
+            
+        section.game--spacing.game__uses
+            h3.delta Lettres déjà utilisées    
+            - var numberItem = 0
+            while numberItem < 7
+                span.game__uses--letter a
+                - numberItem++
+        
+    section.game
+        h2.hidden Le jeu du pendu
+        section.game__reset
+            h3.delta Alors&nbsp;? Heureux&nbsp;?
+            p Félicitation, vous avez trouvé le mot mystère&nbsp;!
+            p
+                | Désolé, mais le mot que vous cherchiez était 
+                span.hightlight incorruptible
+            a(href="index.php").removeLink.game__reset--button Recommencez&nbsp;!
