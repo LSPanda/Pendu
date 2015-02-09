@@ -1,6 +1,6 @@
 <?php
     // Ici ce trouve mon tableau de mot utiliser pour le pendu
-    $words = [
+    $words = array(
         'mijoteront',
         'ondoierons',
         'detendisse',
@@ -148,4 +148,4 @@
         'emasculera',
         'demasquees',
         'aguichions'
-    ];
+    );

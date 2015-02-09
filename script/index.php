@@ -56,16 +56,9 @@
             $stillTry = $stillTry - $try;
 
             /* Le mot est trouvé ? */
-            for( $w = 0; $w < mb_strlen( $chainReplace ); $w++ )
+            if( $chainReplace === $word  )
             {
-                if( $chainReplace[ $w ] === REPLACE )
-                {
-                    $wordFind = false;
-                }
-                else
-                {
-                    $wordFind = true;
-                }
+                $wordFind = true;
             }
         }
         if( $stillTry === 0 )
