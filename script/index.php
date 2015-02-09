@@ -3,8 +3,12 @@
     error_reporting( E_ALL );
     ini_set( 'display_errors', 1 );
 
-    // Inclure fichier de config
+    // Inclure mon tableau de mot
+    include( 'data/word.php' );
     
+    // Inclure fichier de config
+    include( 'configs/config.php' );
+
 
     // Inclure la vue
     include( 'views/layout.php' );
