@@ -11,23 +11,30 @@ c<section class="clearfix game">
   <section class="game--spacing game__play">
     <h3 class="delta">Choisissez une lettre</h3>
     <form action="index.php" method="post" class="form">
-      <select name="lettreEssayee" class="form__select">
+      <select name="tryLetter" class="form__select">
         <?php foreach( $letters as $letter => $status ): ?>
           <?php if( $status ): ?>
             <option value="<?php echo( $letter ); ?>"><?php echo( $letter ); ?></option>
           <?php endif; ?>
         <?php endforeach; ?>
       </select>
+      <input type="hidden" name="iWord" value="<?php echo( $iWord ) ?>">
+      <input type="hidden" name="try" value="<?php echo( $try ) ?>">
+      <input type="hidden" name="wordFind" value="<?php echo( $wordFind ) ?>">
+      <input type="hidden" name="tryLetters" value="<?php echo( $tryLetters ) ?>">
+      <input type="hidden" name="serializeLetters" value="<?php echo( $serializeLetters ) ?>">
       <input type="hidden" name="chainReplace" value="<?php echo( $chainReplace ) ?>">
+      <input type="hidden" name="gameStart" value="<?php echo( $gameStart ) ?>">
+      <input type="hidden" name="gameOver" value="<?php echo( $gameOver ) ?>">
       <input type="submit" value="Essayer" class="form__submit">
     </form>
   </section>
   <?php if( !empty( $tryLetters ) ): ?>
     <section class="game--spacing game__uses">
       <h3 class="delta">Lettres déjà utilisées</h3>
-        <?php foreach( $tryLetters as $letter ): ?>
-          <span class="game__uses--letter"><?php echo( $letter ); ?></span>
-        <?php endforeach; ?>
+        <?php for( $ml = 0; $ml < mb_strlen( $tryLetters ); $ml++ ): ?>
+          <span class="game__uses--letter"><?php echo( $tryLetters[ $ml ] ); ?></span>
+        <?php endfor; ?>
     </section>
   <?php endif; ?>
 </section>

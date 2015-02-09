@@ -10,8 +10,6 @@
           <img src="css/images/panda<?php echo( $try ) ?>.gif" alt="Ètape d'avancement dans le jeux du pendu" class="header__img--center">
           <?php if( $wordFind === true && $gameOver === true ): ?>
             <img src="css/images/win.gif" alt="Ètape d'avancement dans le jeux du pendu" class="header__img--center">
-        <?php elseif( $wordFind === false && $gameOver === true ): ?>
-              <img src="css/images/loose.gif" alt="Ètape d'avancement dans le jeux du pendu" class="header__img--center">
           <?php endif; ?>
         <?php else: ?>
           <img src="css/images/hello.gif" alt="Ètape d'avancement dans le jeux du pendu" class="header__img--center">
