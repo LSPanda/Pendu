@@ -9,17 +9,22 @@
     <h3 class="delta">Choisissez une lettre</h3>
     <form action="index.php" method="post" class="form">
       <select name="lettreEssayee" class="form__select">
-        <option value="a">a</option>
-        <option value="b">b</option>
-        <option value="c">c</option>
-        <option value="d">d</option>
-        <option value="e">e</option>
+        <?php foreach( $letters as $letter => $status ): ?>
+          <?php if( $status ): ?>
+            <option value="<?php echo( $letter ); ?>"><?php echo( $letter ); ?></option>
+          <?php endif; ?>
+        <?php endforeach; ?>
       </select>
       <input type="hidden" value="something">
       <input type="submit" value="Essayer" class="form__submit">
     </form>
   </section>
-  <section class="game--spacing game__uses">
-    <h3 class="delta">Lettres déjà utilisées    </h3><span class="game__uses--letter">a</span><span class="game__uses--letter">a</span><span class="game__uses--letter">a</span><span class="game__uses--letter">a</span><span class="game__uses--letter">a</span><span class="game__uses--letter">a</span><span class="game__uses--letter">a</span>
-  </section>
+  <?php if( !empty( $tryLetters ) ): ?>
+    <section class="game--spacing game__uses">
+      <h3 class="delta">Lettres déjà utilisées</h3>
+        <?php foreach( $tryLetters as $letter ): ?>
+          <span class="game__uses--letter"><?php echo( $letter ); ?></span>
+        <?php endforeach; ?>
+    </section>
+  <?php endif; ?>
 </section>

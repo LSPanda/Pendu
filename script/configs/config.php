@@ -20,6 +20,8 @@
     $try = 1;
     /* Nombre de coup restant à jouer */
     $stillTry = MAX_TRY;
+    /* La partie est-elle finie ? */
+    $gameOver = false;
 
     // Variables correspondantes à la gestion du tableau de lettre
     /* Sérialiser le tableau de lettre pour le conserver plus facilement */
@@ -27,4 +29,4 @@
     /* La lettre choisie par l'utilisateur est la bonne ? */
     $findLetter = false;
     /* Chaîne regroupant les lettres déjà utilisés */
-    $tryLetter = '';
+    $tryLetters = [];

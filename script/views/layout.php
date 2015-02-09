@@ -16,11 +16,16 @@
   <!-- Inclure le header de ma vue -->
   <?php include( 'partials/header.php' ) ?>
 
-  <!-- Inclure le jeu dans ma vue -->
-  <?php include( 'partials/game.php' ) ?>
-
-  <!-- Inclure le resultat dans ma vue -->
-  <?php include( 'partials/result.php' ) ?>
+  <?php
+    if( $gameOver === false )
+    {
+      include( 'partials/game.php' );
+    }
+    else
+    {
+      include( 'partials/result.php' );
+    }
+  ?>
 
   <script src="js/vendor/jquery.js"></script>
   <script src="js/script.js"></script>
