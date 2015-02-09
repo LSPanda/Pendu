@@ -5,7 +5,7 @@
     <?php if( $wordFind === true ): ?>
       <p>Félicitation, vous avez trouvé le mot mystère&nbsp;!</p>
       <?php else: ?>
-        <p>Désolé, mais le mot que vous cherchiez était <span class="hightlight">incorruptible</span></p>
+        <p>Désolé, mais le mot que vous cherchiez était <span class="hightlight"><?php echo( $word ) ?></span></p>
     <?php endif; ?>
     <a href="index.php" class="removeLink game__reset--button">Recommencez&nbsp;!</a>
   </section>

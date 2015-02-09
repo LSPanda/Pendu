@@ -1,8 +1,9 @@
-<section class="clearfix game">
+c<section class="clearfix game">
   <h2 class="hidden">Le jeu du pendu</h2>
   <section class="game--spacing game__word">
     <h3 class="delta">Trouvez le mot secret, encore <?php echo( $stillTry ); ?>coups à jouer&nbsp;!</h3>
-    <div class="game__word--center"><span class="game__word--align">-</span><span class="game__word--align">-</span><span class="game__word--align">-</span><span class="game__word--align">-</span><span class="game__word--align">-</span>
+    <div class="game__word--center">
+        <span class="game__word--align"><?php echo( $chainReplace ) ?></span>
     </div>
   </section>
   <section class="game--spacing game__play">
@@ -15,7 +16,7 @@
           <?php endif; ?>
         <?php endforeach; ?>
       </select>
-      <input type="hidden" value="something">
+      <input type="hidden" name="replaceChain" value="<?php echo( $chainReplace ) ?>">
       <input type="submit" value="Essayer" class="form__submit">
     </form>
   </section>

@@ -20,6 +20,8 @@
     $try = 1;
     /* Nombre de coup restant à jouer */
     $stillTry = MAX_TRY;
+    /* La partie à t'elle commencé */
+    $gameStart = false;
     /* La partie est-elle finie ? */
     $gameOver = false;
 
