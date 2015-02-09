@@ -1,7 +1,7 @@
 <h1 class="hidden">Application écrite dans le cadre de mon cours de Programmation Web Côté Serveur</h1>
 <header class="header">
   <section class="header__title">
-    <h2 class="alpha">Le pendu</h2>
+    <h2 class="alpha"><?php echo( HEADING ); ?></h2>
   </section>
   <section class="header__img">
     <h2 class="hidden">Ou en êtes-vous dans le jeux&nbsp;?</h2>

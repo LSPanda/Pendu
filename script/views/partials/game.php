@@ -1,7 +1,7 @@
 <section class="clearfix game">
   <h2 class="hidden">Le jeu du pendu</h2>
   <section class="game--spacing game__word">
-    <h3 class="delta">Trouvez le mot secret&nbsp;!</h3>
+    <h3 class="delta">Trouvez le mot secret, encore <?php echo( $stillTry ); ?>coups à jouer&nbsp;!</h3>
     <div class="game__word--center"><span class="game__word--align">-</span><span class="game__word--align">-</span><span class="game__word--align">-</span><span class="game__word--align">-</span><span class="game__word--align">-</span>
     </div>
   </section>

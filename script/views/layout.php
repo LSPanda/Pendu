@@ -5,11 +5,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Le Pendu</title>
-  <meta name="description" content="Jeu du pendu créer entièrement en PHP dans le cadre de mon cours de Programmation Web Côté Serveur.">
+  <title><?php echo( TITLE ); ?></title>
+  <meta name="description" content="<?php echo( DESCRIPTION ); ?>">
   <meta name="viewport" content="width-device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="">
-  <link rel="stylesheet" href="css/main-min.css">
+  <link rel="stylesheet" href="<?php echo( PATH_STYLE ); ?>">
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
