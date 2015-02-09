@@ -13,5 +13,16 @@
     // Inclure mon modele
     include( 'models/model.php' );
 
+    // - Le Jeu démarre !
+    if( $_SERVER[ 'REQUEST_METHOD' ] === 'GET' )
+    {
+        $word = selectWord( $words );
+        $chainReplace = createReplaceString( $word );
+    }
+    elseif( $_SERVER[ 'REQUEST_METHOD' ] === 'POST' )
+    {
+        
+    }
+
     // Inclure la vue
     include( 'views/layout.php' );

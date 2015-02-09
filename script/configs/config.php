@@ -7,9 +7,7 @@
 
     // Variables correspondantes au status d'un mot pendant le jeux
     /* Caractère de remplacement */
-    $replace = '-';
-    /* Chaîne de remplacement */
-    $chainReplace = '';
+    define( 'REPLACE', '_' );
     /* Le mot est trouvée ? */
     $wordFind = false;
 

@@ -3,7 +3,7 @@
   <section class="game__reset">
     <h3 class="delta">Partie terminée&nbsp;!</h3>
     <?php if( $wordFind === true ): ?>
-      <p>Félicitation, vous avez trouvé le mot mystère&nbsp;!</p>
+      <p>Félicitation, il s'agissait bien de <span class="hightlight"><?php echo( $word ) ?></span></p>
       <?php else: ?>
         <p>Désolé, mais le mot que vous cherchiez était <span class="hightlight"><?php echo( $word ) ?></span></p>
     <?php endif; ?>

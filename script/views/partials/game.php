@@ -3,7 +3,9 @@ c<section class="clearfix game">
   <section class="game--spacing game__word">
     <h3 class="delta">Trouvez le mot secret, encore <?php echo( $stillTry ); ?>coups à jouer&nbsp;!</h3>
     <div class="game__word--center">
-        <span class="game__word--align"><?php echo( $chainReplace ) ?></span>
+      <?php for( $l = 0; $l < mb_strlen( $chainReplace ); $l++ ): ?>
+        <span class="game__word--align"><?php echo( $chainReplace[ $l ] ); ?></span>
+      <?php endfor; ?>
     </div>
   </section>
   <section class="game--spacing game__play">
@@ -16,7 +18,7 @@ c<section class="clearfix game">
           <?php endif; ?>
         <?php endforeach; ?>
       </select>
-      <input type="hidden" name="replaceChain" value="<?php echo( $chainReplace ) ?>">
+      <input type="hidden" name="chainReplace" value="<?php echo( $chainReplace ) ?>">
       <input type="submit" value="Essayer" class="form__submit">
     </form>
   </section>
