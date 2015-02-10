@@ -1,7 +1,7 @@
 c<section class="clearfix game">
   <h2 class="hidden">Le jeu du pendu</h2>
   <section class="game--spacing game__word">
-    <h3 class="delta">Trouvez le mot secret, encore <?php echo( $stillTry ); ?>coups à jouer&nbsp;!</h3>
+    <h3 class="delta">Trouvez le mot secret, il vous reste <?php echo( $stillTry ); ?>chances pour y arriver&nbsp;!</h3>
     <div class="game__word--center">
       <?php for( $l = 0; $l < mb_strlen( $chainReplace ); $l++ ): ?>
         <span class="game__word--align"><?php echo( $chainReplace[ $l ] ); ?></span>
@@ -10,7 +10,7 @@ c<section class="clearfix game">
   </section>
   <section class="game--spacing game__play">
     <h3 class="delta">Choisissez une lettre</h3>
-    <form action="<?php echo( $_SERVER['PHP_SELF']; ) ?>" method="post" class="form">
+    <form action="<?php echo( $_SERVER['PHP_SELF'] ); ?>" method="post" class="form">
       <select name="tryLetter" class="form__select">
         <?php foreach( $letters as $letter => $status ): ?>
           <?php if( $status ): ?>
