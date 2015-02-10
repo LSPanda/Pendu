@@ -10,7 +10,7 @@ c<section class="clearfix game">
   </section>
   <section class="game--spacing game__play">
     <h3 class="delta">Choisissez une lettre</h3>
-    <form action="index.php" method="post" class="form">
+    <form action="<?php echo( $_SERVER['PHP_SELF']; ) ?>" method="post" class="form">
       <select name="tryLetter" class="form__select">
         <?php foreach( $letters as $letter => $status ): ?>
           <?php if( $status ): ?>
