@@ -13,7 +13,7 @@
 
     // Variables correspondantes à a durée de vie de la partie
     /* Nombre d'essai maximum de jeu */
-    define( 'MAX_TRY', 8 );
+    define( 'MAX_TRY', 7 );
     /* Nombre d'essai déjà réalisé */
     $try = 1;
     /* Nombre de coup restant à jouer */
